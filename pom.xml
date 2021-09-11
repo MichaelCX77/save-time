@@ -4,8 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>save.time</groupId>
 	<artifactId>save.time</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>save.time</name>
+	<version>0.0.1</version>
+	<name>save-time</name>
 	<dependencies>
 		<dependency>
 			<groupId>org.postgresql</groupId>
