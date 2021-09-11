@@ -9,41 +9,40 @@ import save.time.view.CarregamentoView;
 import save.time.view.LoginView;
 
 public class MainInit {
-  EntityManager em = null;
-  
-  public MainInit(EntityManager em) {
-    this.em = em;
-  }
-  
-  public static void main(String[] args) {
-	new CarregamentoView();
-
-    EntityManagerFactory entityManegerfactory = null;
 	
-	try {
-		entityManegerfactory = Persistence.createEntityManagerFactory("SAVE_TIME");
-	} catch (Exception e) {
-		JOptionPane.showMessageDialog(CarregamentoView.getCarregamentoFrame(), "Problema na configuração do banco de dados", "Erro", 0);
-		System.exit(0);
+	EntityManager em = null;
+
+	public MainInit(EntityManager em) {
+		this.em = em;
 	}
 
-    EntityManager em = null;
+	public static void main(String[] args) {
+		
+		new CarregamentoView();
+		EntityManagerFactory entityManegerfactory = null;
 
-    try {
-      em = entityManegerfactory.createEntityManager();
-      Connection.setConnection(em);
-    } catch (Exception e) {
-      JOptionPane.showMessageDialog(CarregamentoView.getCarregamentoFrame(), "Falha de conex\u00E3o!", "Erro", 0);
-      System.exit(0);
-    } 
-    
-	CarregamentoView.getCarregamentoFrame().setVisible(false);
-	new LoginView();
-	System.out.println("Sucesso");
-	
-  }
-  
-  public void setEntity(EntityManager em) {
-    this.em = em;
-  }
+		try {
+			entityManegerfactory = Persistence.createEntityManagerFactory("SAVE_TIME");
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(CarregamentoView.getCarregamentoFrame(), "Problema na configuração do banco de dados", "Erro", 0);
+			System.exit(0);
+		}
+
+		EntityManager em = null;
+
+		try {
+			em = entityManegerfactory.createEntityManager();
+			Connection.setConnection(em);
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(CarregamentoView.getCarregamentoFrame(), "Falha de conex\u00E3o!", "Erro", 0);
+			System.exit(0);
+		}
+
+		CarregamentoView.getCarregamentoFrame().setVisible(false);
+		new LoginView();
+	}
+
+	public void setEntity(EntityManager em) {
+		this.em = em;
+	}
 }

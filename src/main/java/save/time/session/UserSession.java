@@ -3,6 +3,7 @@ package save.time.session;
 import save.time.entity.User;
 
 public class UserSession {
+	
   private static User user;
   
   public UserSession(User user) {

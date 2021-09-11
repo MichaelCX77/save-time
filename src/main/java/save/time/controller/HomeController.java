@@ -10,15 +10,16 @@ import save.time.view.LeiturasPanel;
 import save.time.view.LoginView;
 
 public class HomeController {
-  public static void carregaMenus() {
-    if (!Cronometro.getThread().isAlive())
-      Cronometro.getThread().start(); 
-    LoginView.getLoginFrame().setTitle("Home");
-    LeiturasPanel.carregarLeituras();
-    IdiomasPanel.carregarIdiomas();
-    CursosPanel.carregarCursos();
-    ExerciciosPanel.carregarExercicios();
-    EspiritualPanel.carregarEspiritual();
-    DietasPanel.carregarDietas();
-  }
+	public static void carregaMenus() {
+		
+		if (!Cronometro.getThread().isAlive())
+		Cronometro.getThread().start();
+		LoginView.getLoginFrame().setTitle("Home");
+		LeiturasPanel.carregarLeituras();
+		IdiomasPanel.carregarIdiomas();
+		CursosPanel.carregarCursos();
+		ExerciciosPanel.carregarExercicios();
+		EspiritualPanel.carregarEspiritual();
+		DietasPanel.carregarDietas();
+	}
 }

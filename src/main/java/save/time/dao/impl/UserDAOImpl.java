@@ -9,10 +9,11 @@ public class UserDAOImpl {
 	public Query findByUser() {
 		
 		Query query = null;
+		
 		try {
-			query = Connection.getConnection().createQuery("SELECT TB01 "
-					+ "FROM "
-					+ "User TB01 "
+			query = Connection.getConnection().createQuery(
+					"SELECT TB01 "
+					+ "FROM User TB01 "
 					+ "WHERE "
 					+ "TB01.login = ?1");
 		} catch (Exception e) {
