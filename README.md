@@ -76,7 +76,7 @@ Pré Requisitos: Java 8 e Maven com variáveis de ambiente configuradas
   mvn clean package
 
 #5 executar artefato
-  java -jar target/save-time-{VERSION}-jar-with-dependencies.jar
+  java -jar target/save.time-{VERSION}-jar-with-dependencies.jar
   
   ```
   
