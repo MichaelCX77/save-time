@@ -1,5 +1,5 @@
 # Save Time
-[![BOM](https://img.shields.io/npm/l/react)](https://github.com/MichaelCX77/save-time/blob/main/LICENSE)
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/MichaelCX77/save-time/blob/main/LICENSE)
 
 O Save Time é uma plataforma desenvolvida para Windows Desktop com o intuito de registrar a quantidade de tempo gasta em atividades diárias como Leitura, Cursos e Linguagens.
 A proposta da ferramenta é que você possua maior visibilidade e controle das atividades que executa.
@@ -56,3 +56,28 @@ A plataforma posteriormente poderá ter ferramentas de relatórios, lembretes, g
 ## Implantação em Produção
 
 <li> Postgresql em Nuvem Heroku (AWS)
+  
+<br/><br/>
+  
+# Como executar o Projeto
+  
+Pré Requisitos: Java 8 e Maven com variáveis de ambiente configuradas
+
+  ```bash
+#1 clonar repositório
+  git clone https://github.com/MichaelCX77/save-time/
+  
+#2 configurar o arquivo persistence.xml com sua Database
+  
+#3 entrar na pasta do projeto
+  cd save-time
+  
+#4 executar build maven
+  mvn clean package
+
+#5 executar artefato
+  java -jar target/save-time-{VERSION}-jar-with-dependencies.jar
+  
+  ```
+  
+  
