@@ -47,7 +47,8 @@ A plataforma posteriormente poderá ter ferramentas de relatórios, lembretes, g
   
 <li> Java
 <li> JPA
-<li> EclipseLink
+<li> EntityManager
+<li> Hibernate
 <li> JodaTime
 
 <br/>
