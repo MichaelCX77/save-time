@@ -17,25 +17,30 @@ public class MainInit {
   
   public static void main(String[] args) {
 	new CarregamentoView();
-    EntityManagerFactory entityManegerfactory = Persistence.createEntityManagerFactory("SAVE_TIME");
+
+    EntityManagerFactory entityManegerfactory = null;
+	
+	try {
+		entityManegerfactory = Persistence.createEntityManagerFactory("SAVE_TIME");
+	} catch (Exception e) {
+		JOptionPane.showMessageDialog(CarregamentoView.getCarregamentoFrame(), "Problema na configuração do banco de dados", "Erro", 0);
+		System.exit(0);
+	}
+
     EntityManager em = null;
-    boolean falha = false;
+
     try {
       em = entityManegerfactory.createEntityManager();
       Connection.setConnection(em);
     } catch (Exception e) {
       JOptionPane.showMessageDialog(CarregamentoView.getCarregamentoFrame(), "Falha de conex\u00E3o!", "Erro", 0);
-      falha = true;
+      System.exit(0);
     } 
     
-    if (falha) {
-    	System.out.println("Falha");
-      System.exit(0);
-    } else {
-    	CarregamentoView.getCarregamentoFrame().setVisible(false);
-    	new LoginView();
-    	System.out.println("Sucesso");
-    } 
+	CarregamentoView.getCarregamentoFrame().setVisible(false);
+	new LoginView();
+	System.out.println("Sucesso");
+	
   }
   
   public void setEntity(EntityManager em) {
