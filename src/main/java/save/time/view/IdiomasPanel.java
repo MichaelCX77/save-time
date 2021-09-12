@@ -216,11 +216,11 @@ public class IdiomasPanel {
 		comboMeusIdiomas = new JComboBox();
 		comboMeusIdiomas.setModel(new DefaultComboBoxModel<String>(new String[] { "Selecione..." }));
 		comboMeusIdiomas.setBounds(22, 57, 200, 20);
-		comboMeusIdiomas.addItem("Ingl\u00EAs");
+		comboMeusIdiomas.addItem("Inglês");
 		comboMeusIdiomas.addItem("Espanhol");
-		comboMeusIdiomas.addItem("Franc\u00EAs");
+		comboMeusIdiomas.addItem("Francês");
 		panelForm.add(comboMeusIdiomas);
-		btnProximo = new JButton("Pr\u00F3ximo");
+		btnProximo = new JButton("Próximo");
 		btnProximo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				IdiomasPanel.actionProximo(e);
@@ -252,7 +252,7 @@ public class IdiomasPanel {
 		} else {
 			panelForm.setVisible(false);
 			carregaForm();
-			if (e.getActionCommand().equals("Pr\u00F3ximo")) {
+			if (e.getActionCommand().equals("Próximo")) {
 				panelCronometro.setVisible(true);
 			} else {
 				lblMensagem.setVisible(false);

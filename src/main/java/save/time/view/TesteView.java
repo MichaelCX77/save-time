@@ -68,8 +68,8 @@ public class TesteView {
 		table.setModel(new DefaultTableModel(
 				new Object[][] { { null, null, null, null, null, null }, { null, null, null, null, null, null },
 						{ null, null, null, null, null, null }, },
-				new String[] { "Livro", "Total de P\u00E1ginas", "P\u00E1gina Atual", "Data", "Tempo Gasto",
-						"Conclus\u00E3o" }) {
+				new String[] { "Livro", "Total de Páginas", "Página Atual", "Data", "Tempo Gasto",
+						"Conclusão" }) {
 			Class[] columnTypes = new Class[] { Integer.class, Object.class, Object.class, Object.class, String.class,
 					String.class };
 

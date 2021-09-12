@@ -108,7 +108,7 @@ public class HomeView {
 				HomeView.verificaModificacoes();
 			}
 		});
-		tabbedPane.addTab("Exerc\u00EDcios", (Icon) null, panelExercicios, (String) null);
+		tabbedPane.addTab("Exercícios", (Icon) null, panelExercicios, (String) null);
 		panelEspiritual = new JPanel();
 		panelEspiritual.setBorder(new BevelBorder(1, null, null, null, null));
 		panelEspiritual.setBackground(Color.DARK_GRAY);
@@ -162,7 +162,7 @@ public class HomeView {
 				|| EspiritualPanel.isControle() || DietasPanel.isControle() || CursosPanel.isControle()) {
 			Object[] options = { "Prosseguir", "Cancelar" };
 			int option = JOptionPane.showOptionDialog(getPanelHome(),
-					"Existem dados n\u00E3o salvos, deseja prosseguir e perd\u00EA-los?", "Mensagem", -1, 1, null,
+					"Existem dados não salvos, deseja prosseguir e perdê-los?", "Mensagem", -1, 1, null,
 					options, options[0]);
 			if (option == 0) {
 				LeiturasPanel.resetPanel();

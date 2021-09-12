@@ -55,7 +55,7 @@ public class LoginView {
 		panelLogin.setBounds(525, 110, 321, 440);
 		loginFrame.getContentPane().add(panelLogin);
 		panelLogin.setLayout((LayoutManager) null);
-		JLabel label = new JLabel("Usu\u00E1rio:");
+		JLabel label = new JLabel("Usuário:");
 		label.setFont(new Font("Tahoma", 0, 14));
 		label.setBounds(67, 227, 74, 14);
 		panelLogin.add(label);
@@ -118,7 +118,7 @@ public class LoginView {
 			lblMensagem.setText("*Verifique os campos");
 			lblMensagem.setVisible(true);
 		} else if (userField.getText().equals("")) {
-			lblMensagem.setText("*Informe o Usu\uFFFDrio");
+			lblMensagem.setText("*Informe o Usuário");
 			lblMensagem.setVisible(true);
 		} else if (passwordString == "") {
 			lblMensagem.setText("*Informe a senha");

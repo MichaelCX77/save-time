@@ -99,7 +99,7 @@ public class ExerciciosPanel {
 		table.setBorder(new BevelBorder(1, Color.DARK_GRAY, Color.DARK_GRAY, Color.DARK_GRAY, Color.DARK_GRAY));
 		table.setBackground(new Color(255, 204, 51));
 		table.setModel(new DefaultTableModel(ExerciciosPanelController.carregaTable(),
-				(Object[]) new String[] { "Data", "Tempo Dedicado", "Exerc\u00EDcio" }) {
+				(Object[]) new String[] { "Data", "Tempo Dedicado", "Exercício" }) {
 			Class[] columnTypes = new Class[] { Integer.class, Object.class, Object.class, Object.class, String.class,
 					String.class };
 
@@ -185,7 +185,7 @@ public class ExerciciosPanel {
 		});
 		btnFinalizarTudo.setBounds(187, 195, 86, 34);
 		panelFinalizar.add(btnFinalizarTudo);
-		JLabel lblNomeExercicioFinalizar = new JLabel("Nome do Exerc\u00EDcio:");
+		JLabel lblNomeExercicioFinalizar = new JLabel("Nome do Exercício:");
 		lblNomeExercicioFinalizar.setFont(new Font("Tahoma", 0, 14));
 		lblNomeExercicioFinalizar.setBounds(22, 30, 130, 20);
 		panelFinalizar.add(lblNomeExercicioFinalizar);
@@ -203,7 +203,7 @@ public class ExerciciosPanel {
 		txtTempoDedicado.setBounds(103, 132, 112, 20);
 		panelFinalizar.add(txtTempoDedicado);
 		txtTempoDedicado.setColumns(10);
-		btnAlterarExercicio = new JButton("Alterar Exerc\u00EDcio");
+		btnAlterarExercicio = new JButton("Alterar Exercício");
 		btnAlterarExercicio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ExerciciosPanel.lblMensagemFinalizar.setVisible(false);
@@ -233,11 +233,11 @@ public class ExerciciosPanel {
 		txtNomeExercicio.setBounds(22, 69, 268, 20);
 		panelForm.add(txtNomeExercicio);
 		txtNomeExercicio.setColumns(10);
-		lblNomeExercicio = new JLabel("Nome do Exerc\u00EDcio:");
+		lblNomeExercicio = new JLabel("Nome do Exercício:");
 		lblNomeExercicio.setFont(new Font("Tahoma", 0, 14));
 		lblNomeExercicio.setBounds(22, 45, 121, 20);
 		panelForm.add(lblNomeExercicio);
-		rdbtnExercicioExistente = new JRadioButton("Exerc\u00EDcio Existente");
+		rdbtnExercicioExistente = new JRadioButton("Exercício Existente");
 		rdbtnExercicioExistente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (ExerciciosPanel.rdbtnExercicioExistente.isSelected()
@@ -251,7 +251,7 @@ public class ExerciciosPanel {
 		rdbtnExercicioExistente.setBackground(Color.LIGHT_GRAY);
 		rdbtnExercicioExistente.setBounds(22, 97, 150, 23);
 		panelForm.add(rdbtnExercicioExistente);
-		rdbtnNovoExercicio = new JRadioButton("Novo Exerc\u00EDcio");
+		rdbtnNovoExercicio = new JRadioButton("Novo Exercício");
 		rdbtnNovoExercicio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (ExerciciosPanel.rdbtnNovoExercicio.isSelected()
@@ -266,7 +266,7 @@ public class ExerciciosPanel {
 		rdbtnNovoExercicio.setSelected(true);
 		rdbtnNovoExercicio.setBounds(20, 9, 109, 23);
 		panelForm.add(rdbtnNovoExercicio);
-		btnProximo = new JButton("Pr\u00F3ximo");
+		btnProximo = new JButton("Próximo");
 		btnProximo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ExerciciosPanel.actionProximo(e);
@@ -274,7 +274,7 @@ public class ExerciciosPanel {
 		});
 		btnProximo.setBounds(114, 206, 89, 29);
 		panelForm.add(btnProximo);
-		lblMeusExercicios = new JLabel("Meus Exerc\u00EDcios:");
+		lblMeusExercicios = new JLabel("Meus Exercícios:");
 		lblMeusExercicios.setBounds(22, 134, 121, 14);
 		panelForm.add(lblMeusExercicios);
 		lblMeusExercicios.setFont(new Font("Tahoma", 0, 14));
@@ -298,18 +298,18 @@ public class ExerciciosPanel {
 
 	public static void actionProximo(ActionEvent e) {
 		if (txtNomeExercicio.getText().equals("") && comboMeusExercicios.getSelectedItem().equals("Selecione...")) {
-			lblMensagem.setText("*Informe o Exerc\u00EDcio");
+			lblMensagem.setText("*Informe o Exercício");
 			lblMensagem.setVisible(true);
 		} else {
 			String livro = ExerciciosPanelController.verificaExercicioString(UserSession.getUser().getId(),
 					txtNomeExercicio.getText());
 			if (!livro.equals("")) {
-				lblMensagem.setText("*Voc\u00EA j\u00E1 cadastrou esse exercicio!");
+				lblMensagem.setText("*Você já cadastrou esse exercicio!");
 				lblMensagem.setVisible(true);
 			} else {
 				panelForm.setVisible(false);
 				carregaForm();
-				if (e.getActionCommand().equals("Pr\u00F3ximo")) {
+				if (e.getActionCommand().equals("Próximo")) {
 					panelCronometro.setVisible(true);
 				} else {
 					lblMensagem.setVisible(false);
@@ -411,7 +411,7 @@ public class ExerciciosPanel {
 		panelForm.setVisible(true);
 		habilitaExercicioExistente();
 		habilitaNovoExercicio();
-		btnProximo.setText("Pr\u00F3ximo");
+		btnProximo.setText("Próximo");
 		rdbtnNovoExercicio.setSelected(true);
 	}
 
@@ -424,7 +424,7 @@ public class ExerciciosPanel {
 		table.setBorder(new BevelBorder(1, Color.DARK_GRAY, Color.DARK_GRAY, Color.DARK_GRAY, Color.DARK_GRAY));
 		table.setBackground(new Color(255, 204, 51));
 		table.setModel(new DefaultTableModel(ExerciciosPanelController.carregaTable(),
-				(Object[]) new String[] { "Data", "Tempo Dedicado", "Exerc\u00EDcio" }) {
+				(Object[]) new String[] { "Data", "Tempo Dedicado", "Exercício" }) {
 			Class[] columnTypes = new Class[] { Object.class, Object.class, Object.class, Object.class, Object.class,
 					Object.class };
 

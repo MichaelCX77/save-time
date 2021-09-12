@@ -113,7 +113,7 @@ public class LeiturasPanel {
 		table.setBorder(new BevelBorder(1, Color.DARK_GRAY, Color.DARK_GRAY, Color.DARK_GRAY, Color.DARK_GRAY));
 		table.setBackground(new Color(255, 204, 51));
 		table.setModel(new DefaultTableModel(LeiturasPanelController.carregaTable(), (Object[]) new String[] { "Data",
-				"Tempo Dedicado", "Livro", "Total de P\u00E1ginas", "P\u00E1gina Atual", "Conclus\u00E3o" }) {
+				"Tempo Dedicado", "Livro", "Total de Páginas", "Página Atual", "Conclusão" }) {
 			Class[] columnTypes = new Class[] { Object.class, Object.class, Object.class, Object.class, Object.class,
 					Object.class };
 
@@ -199,17 +199,17 @@ public class LeiturasPanel {
 			public void actionPerformed(ActionEvent e) {
 				if (!LeiturasPanel.txtPaginaAtualFinalizar.getText().matches("[0-9]*")
 						|| LeiturasPanel.txtPaginaAtualFinalizar.getText().equals("")) {
-					LeiturasPanel.lblMensagemFinalizar.setText("*Verifique p\u00E1gina atual");
+					LeiturasPanel.lblMensagemFinalizar.setText("*Verifique pagina atual");
 					LeiturasPanel.lblMensagemFinalizar.setVisible(true);
 				} else if (Integer.parseInt(LeiturasPanel.txtTotalPaginasFinalizar.getText()) < Integer
 						.parseInt(LeiturasPanel.txtPaginaAtualFinalizar.getText())) {
-					LeiturasPanel.lblMensagemFinalizar.setText("*Verifique p\u00E1gina atual");
+					LeiturasPanel.lblMensagemFinalizar.setText("*Verifique página atual");
 					LeiturasPanel.lblMensagemFinalizar.setVisible(true);
 				} else {
 					Leituras livro = LeiturasPanelController.verificaPaginaMaisRecente(UserSession.getUser().getId(),
 							LeiturasPanel.txtNomeLivroFinalizar.getText());
 					if (livro.getPgAtual() >= Integer.parseInt(LeiturasPanel.txtPaginaAtualFinalizar.getText())) {
-						LeiturasPanel.lblMensagemFinalizar.setText("*Verifique p\u00E1gina atual");
+						LeiturasPanel.lblMensagemFinalizar.setText("*Verifique página atual");
 						LeiturasPanel.lblMensagemFinalizar.setVisible(true);
 					} else {
 						LeiturasPanel.objLeituras
@@ -227,11 +227,11 @@ public class LeiturasPanel {
 		lblNomeLivroFinalizar.setFont(new Font("Tahoma", 0, 14));
 		lblNomeLivroFinalizar.setBounds(22, 20, 112, 20);
 		panelFinalizar.add(lblNomeLivroFinalizar);
-		JLabel lblTotalPaginasFinalizar = new JLabel("Total de P\u00E1ginas:");
+		JLabel lblTotalPaginasFinalizar = new JLabel("Total de Páginas:");
 		lblTotalPaginasFinalizar.setFont(new Font("Tahoma", 0, 14));
 		lblTotalPaginasFinalizar.setBounds(22, 75, 112, 20);
 		panelFinalizar.add(lblTotalPaginasFinalizar);
-		lblPaginaAtualFinalizar = new JLabel("P\u00E1gina Atual:");
+		lblPaginaAtualFinalizar = new JLabel("Pá1gina Atual:");
 		lblPaginaAtualFinalizar.setFont(new Font("Tahoma", 0, 14));
 		lblPaginaAtualFinalizar.setBounds(204, 75, 112, 20);
 		panelFinalizar.add(lblPaginaAtualFinalizar);
@@ -305,7 +305,7 @@ public class LeiturasPanel {
 		lblNomeLivro.setFont(new Font("Tahoma", 0, 14));
 		lblNomeLivro.setBounds(22, 58, 121, 20);
 		panelForm.add(lblNomeLivro);
-		lblTotalPaginas = new JLabel("Total de P\u00E1ginas:");
+		lblTotalPaginas = new JLabel("Total de Páginas:");
 		lblTotalPaginas.setFont(new Font("Tahoma", 0, 14));
 		lblTotalPaginas.setBounds(22, 115, 113, 20);
 		panelForm.add(lblTotalPaginas);
@@ -340,7 +340,7 @@ public class LeiturasPanel {
 		rdbtnNovoLivro.setSelected(true);
 		rdbtnNovoLivro.setBounds(33, 9, 109, 23);
 		panelForm.add(rdbtnNovoLivro);
-		btnProximo = new JButton("Pr\u00F3ximo");
+		btnProximo = new JButton("Próximo");
 		btnProximo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				LeiturasPanel.actionProximo(e);
@@ -353,7 +353,7 @@ public class LeiturasPanel {
 		lblMeusLivros.setBounds(22, 58, 121, 14);
 		panelForm.add(lblMeusLivros);
 		lblMeusLivros.setFont(new Font("Tahoma", 0, 14));
-		lblPaginaAtualForm = new JLabel("P\u00E1gina Atual:");
+		lblPaginaAtualForm = new JLabel("Página Atual:");
 		lblPaginaAtualForm.setVisible(false);
 		lblPaginaAtualForm.setFont(new Font("Tahoma", 0, 14));
 		lblPaginaAtualForm.setBounds(211, 109, 113, 21);
@@ -383,13 +383,13 @@ public class LeiturasPanel {
 			lblMensagem.setVisible(true);
 		} else if (!txtTotalPaginasForm.getText().matches("[0-9]*") || txtTotalPaginasForm.getText().equals("")) {
 			System.out.println(txtTotalPaginasForm.getText());
-			lblMensagem.setText("*Verifique o total de p\u00E1ginas");
+			lblMensagem.setText("*Verifique o total de páginas");
 			lblMensagem.setVisible(true);
 		} else {
 			String livro = LeiturasPanelController.verificaLivroString(UserSession.getUser().getId(),
 					txtNomeLivro.getText());
 			if (!livro.equals("")) {
-				lblMensagem.setText("*Voc\u00EA j\u00E1 cadastrou esse livro!");
+				lblMensagem.setText("*Você já cadastrou esse livro!");
 				lblMensagem.setVisible(true);
 			} else {
 				boolean livroFinalizado = false;
@@ -397,12 +397,12 @@ public class LeiturasPanel {
 						.parseInt(txtPaginaAtualForm.getText()) == Integer.parseInt(txtTotalPaginasForm.getText()))
 					livroFinalizado = true;
 				if (livroFinalizado) {
-					lblMensagem.setText("*Esse livro j\u00E1 foi finalizado!");
+					lblMensagem.setText("*Esse livro já foi finalizado!");
 					lblMensagem.setVisible(true);
 				} else {
 					panelForm.setVisible(false);
 					carregaForm();
-					if (e.getActionCommand().equals("Pr\u00F3ximo")) {
+					if (e.getActionCommand().equals("Próximo")) {
 						panelCronometro.setVisible(true);
 					} else {
 						lblMensagem.setVisible(false);
@@ -529,7 +529,7 @@ public class LeiturasPanel {
 		table.setBorder(new BevelBorder(1, Color.DARK_GRAY, Color.DARK_GRAY, Color.DARK_GRAY, Color.DARK_GRAY));
 		table.setBackground(new Color(255, 204, 51));
 		table.setModel(new DefaultTableModel(LeiturasPanelController.carregaTable(), (Object[]) new String[] { "Data",
-				"Tempo Dedicado", "Livro", "Total de P\u00E1ginas", "P\u00E1gina Atual", "Conclus\u00E3o" }) {
+				"Tempo Dedicado", "Livro", "Total de Páginas", "Página Atual", "Conclusão" }) {
 			Class[] columnTypes = new Class[] { Object.class, Object.class, Object.class, Object.class, Object.class,
 					Object.class };
 

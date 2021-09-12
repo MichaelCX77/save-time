@@ -105,7 +105,7 @@ public class TesteView {
 		
 		panel_1 = new JPanel();
 		panel_1.setBackground(Color.DARK_GRAY);
-		tabbedPane.addTab("Exerc\uFFFDcios", (Icon) null, panel_1, (String) null);
+		tabbedPane.addTab("Exercícios", (Icon) null, panel_1, (String) null);
 		panel_1.setLayout((LayoutManager) null);
 		
 		ApoioRedimensionarImagem resize = new ApoioRedimensionarImagem();
@@ -160,7 +160,7 @@ public class TesteView {
 			public void actionPerformed(ActionEvent e) {
 				if (!TesteView.this.txtPaginaAtualFinalizar.getText().matches("[0-9]")
 						|| TesteView.this.txtPaginaAtualFinalizar.getText().equals("")) {
-					TesteView.this.lblMensagemFinalizar.setText("*Verifique p\uFFFDgina atual");
+					TesteView.this.lblMensagemFinalizar.setText("*Verifique página atual");
 					TesteView.this.lblMensagemFinalizar.setVisible(true);
 				}
 			}
@@ -173,12 +173,12 @@ public class TesteView {
 		lblNomeLivroFinalizar.setBounds(22, 11, 112, 14);
 		
 		panelFinalizar.add(lblNomeLivroFinalizar);
-		JLabel lblTotalPaginasFinalizar = new JLabel("Total de P\u00E1ginas:");
+		JLabel lblTotalPaginasFinalizar = new JLabel("Total de Páginas:");
 		lblTotalPaginasFinalizar.setFont(new Font("Tahoma", 0, 14));
 		lblTotalPaginasFinalizar.setBounds(22, 65, 112, 14);
 		
 		panelFinalizar.add(lblTotalPaginasFinalizar);
-		this.lblPaginaAtualFinalizar = new JLabel("P\u00E1gina Atual:");
+		this.lblPaginaAtualFinalizar = new JLabel("Página Atual:");
 		this.lblPaginaAtualFinalizar.setFont(new Font("Tahoma", 0, 14));
 		this.lblPaginaAtualFinalizar.setBounds(204, 65, 112, 14);
 		
@@ -264,7 +264,7 @@ public class TesteView {
 		lblNomeLivro.setBounds(10, 28, 121, 34);
 		panelForm.add(lblNomeLivro);
 		
-		lblTotalPaginas = new JLabel("Total de P\u00E1ginas:");
+		lblTotalPaginas = new JLabel("Total de Páginas:");
 		lblTotalPaginas.setFont(new Font("Tahoma", 0, 14));
 		lblTotalPaginas.setBounds(10, 89, 113, 21);
 		panelForm.add(lblTotalPaginas);
@@ -306,7 +306,7 @@ public class TesteView {
 		this.separator_1.setBorder(new BevelBorder(0, null, null, null, null));
 		this.separator_1.setBounds(10, 28, 298, 2);
 		panelForm.add(this.separator_1);
-		this.btnProximo = new JButton("Pr\u00F3ximo");
+		this.btnProximo = new JButton("Próximo");
 		this.btnProximo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (TesteView.this.txtNomeLivro.getText().equals("")
@@ -316,12 +316,12 @@ public class TesteView {
 				} else if (!TesteView.this.txtTotalPaginas.getText().matches("[0-9]*")
 						|| TesteView.this.txtTotalPaginas.getText().equals("")) {
 					System.out.println(TesteView.this.txtTotalPaginas.getText());
-					TesteView.this.lblMensagem.setText("*Verifique o total de p\uFFFDginas");
+					TesteView.this.lblMensagem.setText("*Verifique o total de páginas");
 					TesteView.this.lblMensagem.setVisible(true);
 				} else {
 					TesteView.panelForm.setVisible(false);
 					TesteView.this.carregaForm();
-					if (e.getActionCommand().equals("Pr\uFFFDximo")) {
+					if (e.getActionCommand().equals("Próximo")) {
 						TesteView.panelCronometro.setVisible(true);
 					} else {
 						TesteView.this.lblMensagem.setVisible(false);
@@ -338,7 +338,7 @@ public class TesteView {
 		this.lblMeusLivros.setBounds(10, 38, 76, 14);
 		panelForm.add(this.lblMeusLivros);
 		this.lblMeusLivros.setFont(new Font("Tahoma", 0, 14));
-		lblPaginaAtualForm = new JLabel("P\u00E1gina Atual:");
+		lblPaginaAtualForm = new JLabel("Página Atual:");
 		lblPaginaAtualForm.setVisible(false);
 		lblPaginaAtualForm.setFont(new Font("Tahoma", 0, 14));
 		lblPaginaAtualForm.setBounds(211, 89, 113, 21);
@@ -420,8 +420,8 @@ public class TesteView {
 		table.setBackground(new Color(255, 204, 51));
 		table.setModel(
 				new DefaultTableModel(new Object[][] { { null, null, null, "teste" }, new Object[6], new Object[6] },
-						(Object[]) new String[] { "Livro", "Total de P\u00E1ginas", "P\u00E1gina Atual", "Data",
-								"Tempo Gasto", "Conclus\u00E3o" }) {
+						(Object[]) new String[] { "Livro", "Total de Páginas", "Página Atual", "Data",
+								"Tempo Gasto", "Conclusão" }) {
 					Class[] columnTypes = new Class[] { Integer.class, Object.class, Object.class, Object.class,
 							String.class, String.class };
 

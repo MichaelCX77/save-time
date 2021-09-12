@@ -303,12 +303,12 @@ public class EspiritualPanel {
 			String livro = EspiritualPanelController.verificaAtividadeString(UserSession.getUser().getId(),
 					txtNomeAtividade.getText());
 			if (!livro.equals("")) {
-				lblMensagem.setText("*Voc\u00EA j\u00E1 cadastrou esse Atividade!");
+				lblMensagem.setText("*Você já cadastrou esse Atividade!");
 				lblMensagem.setVisible(true);
 			} else {
 				panelForm.setVisible(false);
 				carregaForm();
-				if (e.getActionCommand().equals("Pr\u00F3ximo")) {
+				if (e.getActionCommand().equals("Próximo")) {
 					panelCronometro.setVisible(true);
 				} else {
 					lblMensagem.setVisible(false);

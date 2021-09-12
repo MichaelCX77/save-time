@@ -67,9 +67,9 @@ public class DietasPanelController {
 	public static void recarregaComboRefeicao() {
 		DietasPanel.getComboRefeicao().removeAllItems();
 		DietasPanel.getComboRefeicao().addItem("Selecione...");
-		DietasPanel.getComboRefeicao().addItem("Caf\u00E9 da Manh\u00E3");
-		DietasPanel.getComboRefeicao().addItem("Almo\u00E7o");
-		DietasPanel.getComboRefeicao().addItem("Caf\u00E9 da Tarde");
+		DietasPanel.getComboRefeicao().addItem("Café da Manhã");
+		DietasPanel.getComboRefeicao().addItem("Almoço");
+		DietasPanel.getComboRefeicao().addItem("Café da Tarde");
 		DietasPanel.getComboRefeicao().addItem("Janta");
 		DietasPanel.getComboRefeicao().addItem("Lanche");
 	}

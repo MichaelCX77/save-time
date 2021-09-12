@@ -113,7 +113,7 @@ public class CursosPanel {
 		table.setBorder(new BevelBorder(1, Color.DARK_GRAY, Color.DARK_GRAY, Color.DARK_GRAY, Color.DARK_GRAY));
 		table.setBackground(new Color(255, 204, 51));
 		table.setModel(new DefaultTableModel(CursosPanelController.carregaTable(), (Object[]) new String[] { "Data",
-				"Tempo Dedicado", "Nome Curso", "Total de Aulas", "Aula Atual", "Conclus\u00E3o" }) {
+				"Tempo Dedicado", "Nome Curso", "Total de Aulas", "Aula Atual", "Conclusão" }) {
 			Class[] columnTypes = new Class[] { Object.class, Object.class, Object.class, Object.class, Object.class,
 					Object.class };
 
@@ -209,7 +209,7 @@ public class CursosPanel {
 					Cursos curso = CursosPanelController.verificaCursoMaisRecente(UserSession.getUser().getId(),
 							CursosPanel.txtNomeCursoFinalizar.getText());
 					if (curso.getAuAtual() >= Integer.parseInt(CursosPanel.txtAulaAtualFinalizar.getText())) {
-						CursosPanel.lblMensagemFinalizar.setText("*Verifique p\u00E1gina atual");
+						CursosPanel.lblMensagemFinalizar.setText("*Verifique página atual");
 						CursosPanel.lblMensagemFinalizar.setVisible(true);
 					} else {
 						CursosPanel.objCursos.setAuAtual(Integer.parseInt(CursosPanel.txtAulaAtualFinalizar.getText()));
@@ -339,7 +339,7 @@ public class CursosPanel {
 		rdbtnNovoCurso.setSelected(true);
 		rdbtnNovoCurso.setBounds(33, 9, 109, 23);
 		panelForm.add(rdbtnNovoCurso);
-		btnProximo = new JButton("Pr\u00F3ximo");
+		btnProximo = new JButton("Próximo");
 		btnProximo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CursosPanel.actionProximo(e);
@@ -387,7 +387,7 @@ public class CursosPanel {
 			String curso = CursosPanelController.verificaCursoString(UserSession.getUser().getId(),
 					txtNomeCurso.getText());
 			if (!curso.equals("")) {
-				lblMensagem.setText("*Voc\u00EA j\u00E1 cadastrou esse curso!");
+				lblMensagem.setText("*Você já cadastrou esse curso!");
 				lblMensagem.setVisible(true);
 			} else {
 				boolean cursoFinalizado = false;
@@ -395,12 +395,12 @@ public class CursosPanel {
 						.parseInt(txtAulaAtualForm.getText()) == Integer.parseInt(txtTotalAulasForm.getText()))
 					cursoFinalizado = true;
 				if (cursoFinalizado) {
-					lblMensagem.setText("*Esse curso j\u00E1 foi finalizado!");
+					lblMensagem.setText("*Esse curso já foi finalizado!");
 					lblMensagem.setVisible(true);
 				} else {
 					panelForm.setVisible(false);
 					carregaForm();
-					if (e.getActionCommand().equals("Pr\u00F3ximo")) {
+					if (e.getActionCommand().equals("Próximo")) {
 						panelCronometro.setVisible(true);
 					} else {
 						lblMensagem.setVisible(false);
@@ -513,7 +513,7 @@ public class CursosPanel {
 		panelForm.setVisible(true);
 		habilitaCursoExistente();
 		habilitaNovoCurso();
-		btnProximo.setText("Pr\u00F3ximo");
+		btnProximo.setText("Próximo");
 		rdbtnNovoCurso.setSelected(true);
 		txtAulaAtualFinalizar.setText("");
 	}
@@ -527,7 +527,7 @@ public class CursosPanel {
 		table.setBorder(new BevelBorder(1, Color.DARK_GRAY, Color.DARK_GRAY, Color.DARK_GRAY, Color.DARK_GRAY));
 		table.setBackground(new Color(255, 204, 51));
 		table.setModel(new DefaultTableModel(CursosPanelController.carregaTable(), (Object[]) new String[] { "Data",
-				"Tempo Dedicado", "Nome Curso", "Total de Aulas", "Aula Atual", "Conclus\u00E3o" }) {
+				"Tempo Dedicado", "Nome Curso", "Total de Aulas", "Aula Atual", "Conclusão" }) {
 			Class[] columnTypes = new Class[] { Object.class, Object.class, Object.class, Object.class, Object.class,
 					Object.class };
 

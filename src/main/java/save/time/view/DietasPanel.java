@@ -74,7 +74,7 @@ public class DietasPanel {
 		table.setBorder(new BevelBorder(1, Color.DARK_GRAY, Color.DARK_GRAY, Color.DARK_GRAY, Color.DARK_GRAY));
 		table.setBackground(new Color(255, 204, 51));
 		table.setModel(new DefaultTableModel(DietasPanelController.carregaTable(),
-				(Object[]) new String[] { "Data", "Hor\u00E1rio", "Refei\u00E7\u00E3o", "Alimento", "Quantidade" }) {
+				(Object[]) new String[] { "Data", "Horário", "Refeição", "Alimento", "Quantidade" }) {
 			Class[] columnTypes = new Class[] { Object.class, Object.class, Object.class, Object.class, Object.class };
 
 			public Class getColumnClass(int columnIndex) {
@@ -109,14 +109,14 @@ public class DietasPanel {
 		comboHorario.setBounds(22, 57, 80, 20);
 		DietasPanelController.recarregaComboHorario();
 		panelForm.add(comboHorario);
-		lblHorario = new JLabel("Hor\u00E1rio:");
+		lblHorario = new JLabel("Horário:");
 		lblHorario.setFont(new Font("Tahoma", 0, 14));
 		lblHorario.setBounds(22, 33, 121, 14);
 		panelForm.add(lblHorario);
-		btnProximo = new JButton("Pr\u00F3ximo");
+		btnProximo = new JButton("Próximo");
 		btnProximo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (e.getActionCommand().equals("Pr\u00F3ximo")) {
+				if (e.getActionCommand().equals("Próximo")) {
 					DietasPanel.actionProximo(e);
 					DietasPanel.controle = true;
 				} else {
@@ -130,7 +130,7 @@ public class DietasPanel {
 		});
 		btnProximo.setBounds(114, 206, 89, 29);
 		panelForm.add(btnProximo);
-		lblRefeicao = new JLabel("Refei\u00E7\u00E3o:");
+		lblRefeicao = new JLabel("Refeição:");
 		lblRefeicao.setBounds(166, 33, 121, 14);
 		panelForm.add(lblRefeicao);
 		lblRefeicao.setFont(new Font("Tahoma", 0, 14));
@@ -206,7 +206,7 @@ public class DietasPanel {
 		comboRefeicao.setEnabled(true);
 		txtAlimento.setEditable(true);
 		txtQuantidade.setEditable(true);
-		btnProximo.setText("Pr\u00F3ximo");
+		btnProximo.setText("Próximo");
 		btnProximo.setBounds(114, 206, 89, 29);
 		btnAlterarDados.setVisible(false);
 	}
@@ -218,7 +218,7 @@ public class DietasPanel {
 		comboRefeicao.setEnabled(true);
 		btnAlterarDados.setVisible(false);
 		btnProximo.setBounds(114, 206, 89, 29);
-		btnProximo.setText("Pr\u00F3ximo");
+		btnProximo.setText("Próximo");
 	}
 
 	public static void recarregaTable() {
@@ -230,7 +230,7 @@ public class DietasPanel {
 		table.setBorder(new BevelBorder(1, Color.DARK_GRAY, Color.DARK_GRAY, Color.DARK_GRAY, Color.DARK_GRAY));
 		table.setBackground(new Color(255, 204, 51));
 		table.setModel(new DefaultTableModel(DietasPanelController.carregaTable(),
-				(Object[]) new String[] { "Data", "Hor\u00E1rio", "Refei\u00E7\u00E3o", "Alimento", "Quantidade" }) {
+				(Object[]) new String[] { "Data", "Horário", "Refeição", "Alimento", "Quantidade" }) {
 			Class[] columnTypes = new Class[] { Object.class, Object.class, Object.class, Object.class, Object.class };
 
 			public Class getColumnClass(int columnIndex) {

@@ -34,7 +34,7 @@ public class MainInit {
 			em = entityManegerfactory.createEntityManager();
 			Connection.setConnection(em);
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(CarregamentoView.getCarregamentoFrame(), "Falha de conex\u00E3o!", "Erro", 0);
+			JOptionPane.showMessageDialog(CarregamentoView.getCarregamentoFrame(), "Falha de conexão!", "Erro", 0);
 			System.exit(0);
 		}
 
