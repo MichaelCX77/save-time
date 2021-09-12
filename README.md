@@ -1,14 +1,13 @@
 # Save Time
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/MichaelCX77/save-time/blob/main/LICENSE)
 
-O Save Time é uma plataforma desenvolvida para Windows Desktop com o intuito de registrar a quantidade de tempo gasta em atividades diárias como Leitura, Cursos e Linguagens.
+O Save Time é uma plataforma desenvolvida para Windows Desktop com o intuito de registrar a quantidade de tempo investida em atividades diárias como Leitura, Cursos e Linguagens.
 A proposta da ferramenta é que você possua maior visibilidade e controle das atividades que executa.
 <br/><br/>
 
 ## <li> Sobre o Projeto
 
-Acesse o link abaixo e faça download da versão mais atual:<br/>
-https://github.com/MichaelCX77/artefatos/tree/master/save-time/versions
+Clique <a href ="https://github.com/MichaelCX77/artefatos/tree/master/save-time/versions">aqui</a> e faça download do executável mais atual<br/>
 
 Após concluir o download, descompacte o arquivo em e clique duas vezes sobre o executável.
 
@@ -59,6 +58,19 @@ A plataforma posteriormente poderá ter ferramentas de relatórios, lembretes, g
   
 <br/><br/>
   
+# Como criar o banco de dados local
+  
+ Pré Requisitos: PSQL com variáveis de ambiente configuradas
+  
+  ```bash
+  #1 Logar no console PSQL
+    Logar em uma database do PSQL (PostgreSQL) com usuário que possua permissões de administrador
+  
+  #2 Executar script de criação do banco
+    Executar script "Criacao do Banco Local.sql" presente na pasta "doc" do projeto
+  ```
+<br/>
+  
 # Como executar o Projeto
   
 Pré Requisitos: Java 8 e Maven com variáveis de ambiente configuradas
@@ -67,17 +79,20 @@ Pré Requisitos: Java 8 e Maven com variáveis de ambiente configuradas
 #1 clonar repositório
   git clone https://github.com/MichaelCX77/save-time/
   
-#2 configurar o arquivo persistence.xml com sua Database
-  
-#3 entrar na pasta do projeto
+#2 entrar na pasta do projeto
   cd save-time
   
-#4 executar build maven
+#3 executar build maven
   mvn clean package
 
-#5 executar artefato
+#4 executar artefato
   java -jar target/save.time-{VERSION}-jar-with-dependencies.jar
   
   ```
+<br/>
+
+## Informações adicionais
   
-  
+ ```bash
+  Após finalizar a configuração já estará criado o user "saveadmin" com senha "saveadmin2021" para login na aplicação
+```
