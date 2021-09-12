@@ -59,6 +59,19 @@ A plataforma posteriormente poderá ter ferramentas de relatórios, lembretes, g
   
 <br/><br/>
   
+# Como criar o banco de dados local
+  
+ Pré Requisitos: PSQL com variáveis de ambiente configuradas
+  
+  ```bash
+  #1 Logar no console PSQL
+    Logar em uma database do PSQL (PostgreSQL) com usuário que possua permissões de administrador
+  
+  #2 Executar script de criação do banco
+    Executar script "Criacao do Banco Local.sql" presente na pasta "doc" do projeto
+  ```
+<br/>
+  
 # Como executar o Projeto
   
 Pré Requisitos: Java 8 e Maven com variáveis de ambiente configuradas
@@ -67,17 +80,20 @@ Pré Requisitos: Java 8 e Maven com variáveis de ambiente configuradas
 #1 clonar repositório
   git clone https://github.com/MichaelCX77/save-time/
   
-#2 configurar o arquivo persistence.xml com sua Database
-  
-#3 entrar na pasta do projeto
+#2 entrar na pasta do projeto
   cd save-time
   
-#4 executar build maven
+#3 executar build maven
   mvn clean package
 
-#5 executar artefato
+#4 executar artefato
   java -jar target/save.time-{VERSION}-jar-with-dependencies.jar
   
   ```
+<br/>
+
+## Informações adicionais
   
-  
+ ```bash
+  Após finalizar a configuração já estará criado o user "saveadmin" com senha "saveadmin2021" para login na aplicação
+```
