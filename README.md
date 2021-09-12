@@ -1,7 +1,7 @@
 # Save Time
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/MichaelCX77/save-time/blob/main/LICENSE)
 
-O Save Time é uma plataforma desenvolvida para Windows Desktop com o intuito de registrar a quantidade de tempo gasta em atividades diárias como Leitura, Cursos e Linguagens.
+O Save Time é uma plataforma desenvolvida para Windows Desktop com o intuito de registrar a quantidade de tempo investida em atividades diárias como Leitura, Cursos e Linguagens.
 A proposta da ferramenta é que você possua maior visibilidade e controle das atividades que executa.
 <br/><br/>
 
