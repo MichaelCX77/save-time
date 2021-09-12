@@ -7,8 +7,7 @@ A proposta da ferramenta é que você possua maior visibilidade e controle das a
 
 ## <li> Sobre o Projeto
 
-Acesse o link abaixo e faça download da versão mais atual:<br/>
-https://github.com/MichaelCX77/artefatos/tree/master/save-time/versions
+Clique <a href ="https://github.com/MichaelCX77/artefatos/tree/master/save-time/versions">aqui</a> e faça download do executável mais atual<br/>
 
 Após concluir o download, descompacte o arquivo em e clique duas vezes sobre o executável.
 
