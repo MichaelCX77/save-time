@@ -80,7 +80,7 @@ Pré Requisitos: Java 8 e Maven com variáveis de ambiente configuradas
 
   ```bash
 #1 clonar repositório
-  git clone https://github.com/MichaelCX77/save-time/
+  git clone https://github.com/MichaelCX77/save-time
   
 #2 entrar na pasta do projeto
   cd save-time
