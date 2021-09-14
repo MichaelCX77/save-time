@@ -47,6 +47,7 @@ A plataforma posteriormente poderá ter ferramentas de relatórios, lembretes, g
 ## Back end
   
 <li> Java
+<li> Maven
 <li> JPA
 <li> EntityManager
 <li> Hibernate
