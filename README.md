@@ -28,10 +28,10 @@ A plataforma posteriormente poderá ter ferramentas de relatórios, lembretes, g
   <img width="900em" src="https://github.com/MichaelCX77/assets/blob/master/assets-save-time/png/login.png"></a><br/><br/>
   <img width="900em" src="https://github.com/MichaelCX77/assets/blob/master/assets-save-time/png/home.png"></a><br/><br/>
   <img width="900em" src="https://github.com/MichaelCX77/assets/blob/master/assets-save-time/png/dietas-page.png"></a><br/><br/>
-  <img width="900em" src="https://github.com/MichaelCX77/assets/blob/master/assets-save-time/png/timer.png">&nbsp&nbsp&nbsp
-  <img width="900em" src="https://github.com/MichaelCX77/assets/blob/master/assets-save-time/png/detalhe-finalize.png"></a><br/><br/>
-  <img width="900em" src="https://github.com/MichaelCX77/assets/blob/master/assets-save-time/png/detalhe-curso-existente.png"></a>&nbsp&nbsp&nbsp
-  <img width="900em" src="https://github.com/MichaelCX77/assets/blob/master/assets-save-time/png/detalhe-save.png"></a>
+  <img width="400em" src="https://github.com/MichaelCX77/assets/blob/master/assets-save-time/png/timer.png">&nbsp&nbsp&nbsp
+  <img width="400em" src="https://github.com/MichaelCX77/assets/blob/master/assets-save-time/png/detalhe-finalize.png"></a><br/><br/>
+  <img width="400em" src="https://github.com/MichaelCX77/assets/blob/master/assets-save-time/png/detalhe-curso-existente.png"></a>&nbsp&nbsp&nbsp
+  <img width="400em" src="https://github.com/MichaelCX77/assets/blob/master/assets-save-time/png/detalhe-save.png"></a>
 </div>
 <br/><br/>
 
